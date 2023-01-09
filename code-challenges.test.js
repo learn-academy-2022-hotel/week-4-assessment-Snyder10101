@@ -92,45 +92,63 @@ describe ('colorCoded', () => {
 // --------------------2) Create a function that takes in an object that contains up votes and down votes and returns the end tally.
 
 // a) Create a test with expect statements for each of the variables provided.
-
+// make are statement and conditions
+const votes1 = { upVotes: 13, downVotes: 2 }
+const votes2 = { upVotes: 2, downVotes: 33 }
 describe('voteState', () => {
   it("takes in an object that contains up votes and down votes and returns the end tally", () => {
-    const votes1 = { upVotes: 13, downVotes: 2 }
-    // Expected output: 11
-    const votes2 = { upVotes: 2, downVotes: 33 }
-    // Expected output: -31
     expect(voteState(votes1)).toEqual(11)
+    // Expected output: 11
     expect(voteState(votes2)).toEqual(-31)
+    // Expected output: -31
   })
 })
 
 
 
 // b) Create the function that makes the test pass.
-let voteState = (object) => {
-  let v = upVotes(props)
-  let d = downVotes(props)
-  let total = (v - d)
-  return total
+// we want to run the values through a function and subtract 
+const voteState = (object) => {
+  // const voteState: (object: any) => number
+  //      upvotes value           -     downvotes value
+  return Object.values(object)[0] - Object.values(object)[1]
 }
+// voteState
+//     ✓ takes in an object that contains up votes and down votes and returns the end tally
 
+// Test Suites: 1 passed, 1 total
+// Tests:       2 passed, 2 total
+// Snapshots:   0 total
+// Time:        0.147 s, estimated 1 s
+/////-----end------////
 // --------------------3) Create a function that takes in two arrays as arguments and returns one array with no duplicate values. STRETCH: Use the spread operator to pass in a dynamic number of arguments.
 
 // a) Create a test with an expect statement using the variables provided.
+const dataArray1 = ["array", "object", "number", "string", "Boolean"]
+const dataArray2 = ["string", "null", "Boolean", "string", "undefined"]
+// Expected output: ["array", "object", "number", "string", "Boolean", "null", "undefined"]
 describe('noDubs', () => {
   it("takes in two arrays as arguments and returns one array with no duplicate values", () => {
-    const dataArray1 = ["array", "object", "number", "string", "Boolean"]
-    const dataArray2 = ["string", "null", "Boolean", "string", "undefined"]
-    // Expected output: ["array", "object", "number", "string", "Boolean", "null", "undefined"]
-    expect(noDubs(dataArray1.concat(dataArray2))).toEqual(["array", "object", "number", "string", "Boolean", "null", "undefined"])
+    expect(noDubs(dataArray1, dataArray2)).toEqual(["array", "object", "number", "string", "Boolean", "null", "undefined"])
   })
 })
 
 
 // b) Create the function that makes the test pass.
-let noDubs = (array) => {
-let array3 = []
-  array.filter((item,index)=>{
-  return (array3.indexOf(item) == index)
-})
+// were gonna creat a function using two arrays and combining them with out same values
+let noDubs = (array1, array2) => {
+  // noDubs is the function 
+  let array3 = (array1.concat(array2))
+  // concat the arrays 
+  return [...new Set(array3)]
+  // return the 3rd array with using set to only return values only used once
 }
+
+// noDubs
+// ✓ takes in two arrays as arguments and returns one array with no duplicate values (1 ms)
+
+// Test Suites: 1 passed, 1 total
+// Tests:       3 passed, 3 total
+// Snapshots:   0 total
+// Time:        0.175 s, estimated 1 s
+// ///---end---///

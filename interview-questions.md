@@ -14,7 +14,7 @@ Researched answer: In functional programming, immutable data are used to instruc
 
 1. What is the difference between a Float and an Integer in Ruby?
 
-Your answer: An integer is a flat number and float has decimals
+Your answer: An integer is a flat number and float has decimals.
 
 Researched answer: An integer is a number without a decimal point, A float is a  number which means it is a number that has a decimal place for more accrete calculations
 

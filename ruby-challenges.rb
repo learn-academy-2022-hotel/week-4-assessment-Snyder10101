@@ -4,7 +4,7 @@
 # --------------------1) Create a method that takes in a number and determines if the number is even or odd. Use the test variables provided.
 # pueudo code #
 # set up an def and end def : detEvenOdd fuction to determine
-# use "number" for the values \
+# use "number" for the values \.
 #  create a conditional .even? if and else 
 num1 = 7
 # Expected output: '7 is odd'

@@ -4,7 +4,11 @@
 # --------------------1) Create a method that takes in a number and determines if the number is even or odd. Use the test variables provided.
 # pueudo code #
 # set up an def and end def : detEvenOdd fuction to determine
+
+# use "number" for the values \.
+
 # use "number" for the values \
+
 #  create a conditional .even? if and else 
 num1 = 7
 # Expected output: '7 is odd'
@@ -66,6 +70,7 @@ def stringmeth string
         p "#{string}" 'this is not  a palindrome'
  end
 end
+
 p stringmeth palindrome_tester1
 "Racecarthis is a palindrome"
 p stringmeth palindrome_tester2
@@ -73,3 +78,4 @@ p stringmeth palindrome_tester2
 p stringmeth palindrome_tester3
 "Rotatorthis is a palindrome"
 # //--end--//
+

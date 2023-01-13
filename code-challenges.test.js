@@ -119,7 +119,11 @@ const voteState = (object) => {
 // Test Suites: 1 passed, 1 total
 // Tests:       2 passed, 2 total
 // Snapshots:   0 total
+
+// Time:        0.147 s, estimated 1 s.
+=======
 // Time:        0.147 s, estimated 1 s
+
 /////-----end------////
 // --------------------3) Create a function that takes in two arrays as arguments and returns one array with no duplicate values. STRETCH: Use the spread operator to pass in a dynamic number of arguments.
 
